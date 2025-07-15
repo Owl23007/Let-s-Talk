@@ -1,2 +1,2 @@
-# Let-s-Talk
+# Just Chat
 聊天吧
