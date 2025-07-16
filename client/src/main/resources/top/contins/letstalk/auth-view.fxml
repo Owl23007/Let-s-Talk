@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="top.contins.letstalk.controller.AuthController"
+            prefHeight="450.0" prefWidth="350.0"
+            stylesheets="@css/global.css,@css/auth-style.css"
+            style="-fx-background-color: rgba(255, 255, 255, 0);"
+            styleClass="root-pane"
+            onMousePressed="#onMousePressed"
+            onMouseDragged="#onMouseDragged">
+    <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0"
+              styleClass="auth-card">
+        <padding>
+            <Insets top="48" right="56" bottom="48" left="56"/>
+        </padding>
+        <vgap>10</vgap>
+        <!-- 标题 -->
+        <Label text="Let's Talk" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2"
+               styleClass="auth-title">
+            <font>
+                <Font name="Segoe UI Bold" size="32"/>
+            </font>
+        </Label>
+        <!-- 用户名 -->
+        <Label text="用户名" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="auth-label"/>
+        <TextField fx:id="usernameField" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                   styleClass="auth-input"/>
+        <!-- 密码 -->
+        <Label text="密码" GridPane.rowIndex="2" GridPane.columnIndex="0"
+               styleClass="auth-label"/>
+        <PasswordField fx:id="passwordField" GridPane.rowIndex="2" GridPane.columnIndex="1"
+                       styleClass="auth-input"/>
+        <!-- 按钮 -->
+        <Button text="登录" onAction="#loginAction" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2"
+                styleClass="auth-btn-primary-block"/>
+        <Button text="注册" onAction="#registerAction" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2"
+                styleClass="auth-btn-outline-block"/>
+    </GridPane>
+
+    <!-- 关闭按钮 -->
+    <Button onAction="#closeAction" styleClass="auth-btn-close"
+            AnchorPane.rightAnchor="8" AnchorPane.topAnchor="8">
+        <graphic>
+            <Label text="✕" styleClass="close-icon"/>
+        </graphic>
+    </Button>
+</AnchorPane>
