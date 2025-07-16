@@ -1,8 +1,8 @@
-module cn.contins.letstalk {
+module top.contins.letstalk {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens cn.contins.letstalk to javafx.fxml;
+    opens top.contins.letstalk to javafx.fxml;
 
-    exports cn.contins.letstalk;
+    exports top.contins.letstalk;
 }

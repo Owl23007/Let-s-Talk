@@ -1,4 +1,4 @@
-package cn.contins.letstalk.controller;
+package top.contins.letstalk.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
